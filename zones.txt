@@ -1,0 +1,49 @@
+India,New Delhi,IST,5.5,0,India
+Sri Lanka,Colombo,IST,5.5,0,Sri Lanka
+Nepal,Kathmandu,NPT,5.75,0,Nepal
+Bangladesh,Dhaka,BST,6,0,Bangladesh
+Pakistan,Karachi,PKT,5,0,Pakistan
+Afghanistan,Kabul,AFT,4.5,0,Afghanistan
+Iran,Tehran,IRST,3.5,1,Iran
+UAE,Dubai,GST,4,0,UAE
+Saudi Arabia,Riyadh,AST,3,0,Saudi Arabia
+London,London,GMT,0,1,UK
+Paris,Paris,CET,1,1,France
+Berlin,Berlin,CET,1,1,Germany
+Rome,Rome,CET,1,1,Italy
+Madrid,Madrid,CET,1,1,Spain
+Athens,Athens,EET,2,1,Greece
+Moscow,Moscow,MSK,3,0,Russia
+Cairo,Cairo,EET,2,1,Egypt
+Johannesburg,Johannesburg,SAST,2,0,South Africa
+Casablanca,Casablanca,WET,0,1,Morocco
+Nairobi,Nairobi,EAT,3,0,Kenya
+New York,New York,EST,-5,1,USA
+Chicago,Chicago,CST,-6,1,USA
+Denver,Denver,MST,-7,1,USA
+Los Angeles,Los Angeles,PST,-8,1,USA
+Anchorage,Anchorage,AKST,-9,1,USA
+Honolulu,Honolulu,HST,-10,0,USA
+Toronto,Toronto,EST,-5,1,Canada
+Vancouver,Vancouver,PST,-8,1,Canada
+Mexico City,Mexico City,CST,-6,0,Mexico
+Sao Paulo,Sao Paulo,BRT,-3,0,Brazil
+Buenos Aires,Buenos Aires,ART,-3,0,Argentina
+Santiago,Santiago,CLT,-4,1,Chile
+Lima,Lima,PET,-5,0,Peru
+Bogota,Bogota,COT,-5,0,Colombia
+Beijing,Beijing,CST,8,0,China
+Shanghai,Shanghai,CST,8,0,China
+Hong Kong,Hong Kong,HKT,8,0,Hong Kong
+Singapore,Singapore,SGT,8,0,Singapore
+Seoul,Seoul,KST,9,0,South Korea
+Tokyo,Tokyo,JST,9,0,Japan
+Bangkok,Bangkok,ICT,7,0,Thailand
+Jakarta,Jakarta,WIB,7,0,Indonesia
+Perth,Perth,AWST,8,0,Australia
+Sydney,Sydney,AEST,10,1,Australia
+Melbourne,Melbourne,AEST,10,1,Australia
+Adelaide,Adelaide,ACST,9.5,1,Australia
+Brisbane,Brisbane,AEST,10,0,Australia
+Auckland,Auckland,NZST,12,1,New Zealand
+Wellington,Wellington,NZST,12,1,New Zealand
