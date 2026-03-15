@@ -1,3 +1,4 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include <map>
 #include <vector>
@@ -83,7 +84,7 @@ public:
 
     void listCities() const{
 
-        cout<<"\nAvailable Cities\n";
+        cout<<"\nAvailable Cities/Counties\n";
 
         for(auto &z:zones)
             cout<<setw(15)<<setfill(' ')<<left<<z.first<<" "
@@ -133,27 +134,21 @@ public:
         return *result;
     }
 
-    static void show(tm t,const TimeZone& z,bool dst){
+    static void show(tm t, const TimeZone& z, bool dst){
 
-        cout<<"\n====================================\n";
+        cout << "\n====================================\n";
 
-        cout<<"City: "<<z.city<<" ("<<z.country<<")\n";
+        cout << "City: " << z.city << " (" << z.country << ")\n";
 
-        cout<<"Zone: "<<z.zoneName<<"\n";
+        cout << "Zone: " << z.zoneName << "\n";
 
-        cout<<"Date: "
-            <<setw(2)<<setfill('0')<<t.tm_mday<<"-"
-            <<setw(2)<<setfill('0')<<(t.tm_mon + 1)<<"-"
-            <<t.tm_year + 1900 << "\n";
+        cout << "Date: " << put_time(&t, "%d-%m-%Y") << "\n";
 
-        cout<<"Time: "
-            <<setw(2)<<t.tm_hour<<":"
-            <<setw(2)<<t.tm_min<<":"
-            <<setw(2)<<t.tm_sec<<"\n";
+        cout << "Time: " << put_time(&t, "%H:%M:%S") << "\n";
 
-        cout<<"DST: "<<(dst?"Applied":"Not Applied")<<"\n";
+        cout << "DST: " << (dst ? "Applied" : "Not Applied") << "\n";
 
-        cout<<"====================================\n";
+        cout << "====================================\n";
     }
 };
 
@@ -206,7 +201,7 @@ public:
 
         while(true){
 
-            cout<<"\nEnter city (or type list): ";
+            cout<<"\nEnter city/country (or type list): ";
 
             getline(cin,city);
 
@@ -216,7 +211,7 @@ public:
             }
 
             if(!db.hasCity(city)){
-                cout<<"City not found\n";
+                cout<<"City/Country not found\n";
                 continue;
             }
 
@@ -343,13 +338,9 @@ public:
 
         tm* result=gmtime(&raw);
 
-        cout<<"\nConverted Date & Time: "
-            <<setw(2)<<setfill('0')<<result->tm_mday<<"-"
-            <<setw(2)<<result->tm_mon+1<<"-"
-            <<result->tm_year+1900<<" "
-            <<setw(2)<<result->tm_hour<<":"
-            <<setw(2)<<result->tm_min
-            <<" "<<t.zoneName<<"\n";
+        cout << "\nConverted Date & Time: "
+            << put_time(result,"%d-%m-%Y %H:%M")
+            << " " << t.zoneName << "\n";
     }
 
     void toggleDST(){
@@ -390,10 +381,10 @@ public:
         auto r = db.search(q);
 
         if(r.empty()){
-            cout<<"City not found\n";
+            cout<<"City/Country not found\n";
         }
         else{
-            cout<<"\nFound Cities:\n";
+            cout<<"\nFound Cities/Countries:\n";
 
             for(auto &c : r)
                 cout<<c<<"\n";
@@ -459,7 +450,7 @@ public:
             cout<<"3 Toggle DST\n";
             cout<<"4 Add Favorite\n";
             cout<<"5 View Favorites\n";
-            cout<<"6 Search City\n";
+            cout<<"6 Search City/Country\n";
             cout<<"7 Live World Clock\n";
             cout<<"8 Exit\n";
 
